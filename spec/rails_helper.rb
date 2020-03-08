@@ -10,18 +10,36 @@ if Rails.env.production?
 end
 require 'rspec/rails'
 
+require 'shoulda/matchers'
+require 'rspec/json_expectations'
+require 'database_cleaner'
+
 begin
   ActiveRecord::Migration.maintain_test_schema!
 rescue ActiveRecord::PendingMigrationError => e
   puts e.to_s.strip
   exit 1
 end
+
 RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
+
+  config.include FactoryBot::Syntax::Methods
+
+  config.before(scope(:suite)) do
+    FactoryBot.find_definitions
+  end
 
   config.use_transactional_fixtures = true
 
   config.infer_spec_type_from_file_location!
 
   config.filter_rails_from_backtrace!
+
+  Shoulda::Matchers.configure do |config|
+    config.integrate do |with|
+      with.test_framework :rspec
+      with.library :rails
+    end
+  end
 end
