@@ -267,7 +267,7 @@ PLATFORMS
 DEPENDENCIES
   activestorage (~> 5.2)
   bootstrap-sass (~> 3.4.1)
-  capybara (>= 2.15)
+  capybara
   coffee-rails (~> 4.2)
   database_cleaner
   db-query-matchers
@@ -277,7 +277,7 @@ DEPENDENCIES
   jquery-rails
   json_spec
   launchy
-  listen (>= 3.0.5, < 3.2)
+  listen
   oj
   oj_mimic_json
   pg (~> 1.1)
