@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  factory name :product do
+  factory :product do
     brand_id      { rand(1..5) }
     title         { Faker::Lorem.word.camelcase }
     bytitle       { title.downcase }

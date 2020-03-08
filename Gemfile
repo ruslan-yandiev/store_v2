@@ -47,7 +47,7 @@ group :development, :test do
   # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'database_cleaner'
   # для создания фабрик
-  gem 'factory_bot'
+  gem 'factory_bot_rails'
   gem 'pg', '~> 1.1'
   gem 'pry'
   gem 'rails-controller-testing'

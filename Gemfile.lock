@@ -89,6 +89,9 @@ GEM
     execjs (2.7.0)
     factory_bot (5.1.1)
       activesupport (>= 4.2.0)
+    factory_bot_rails (5.1.1)
+      factory_bot (~> 5.1.0)
+      railties (>= 4.2.0)
     ffi (1.12.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -271,7 +274,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   database_cleaner
   db-query-matchers
-  factory_bot
+  factory_bot_rails
   faker!
   jbuilder
   jquery-rails
