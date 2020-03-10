@@ -56,6 +56,7 @@ group :development, :test do
   # для создания фабрик
   gem 'factory_bot_rails'
   gem 'pg', '~> 1.1'
+  # дебагер
   gem 'pry'
   gem 'rails-controller-testing'
   gem 'rb-readline'
