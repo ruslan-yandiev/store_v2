@@ -1,10 +1,17 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
+
 gem 'activestorage', '~> 5.2'
 gem 'bootstrap-sass', '~> 3.4.1'
+# для хлебные крошки
+gem 'breadcrumbs_on_rails'
 gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
+# для метатегов
+gem 'meta-tags'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.2.3'
 # Use Puma as the app server
@@ -80,4 +87,4 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
